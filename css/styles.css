@@ -1,0 +1,25 @@
+:root {
+  --color-primary: #1F3A93;
+  --color-accent:  #E67E22;
+  --color-text:    #333;
+  --color-bg:      #F9F9F9;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding-top: 70px; /* 给 fixed-top 导航留空间 */
+}
+
+/* Hero 背景图 */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url('../img/hero-bg.jpg') center/cover no-repeat;
+}
+.hero .overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+.hero .content { position: relative; color: #fff; }

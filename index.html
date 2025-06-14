@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>智领华创 – 首页</title>
+  <!-- 1. Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- 2. Google 字体 Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- 3. AOS 动画库 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- 4. 自定义样式 -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">智领华创</a>
+    <ul class="navbar-nav ms-auto align-items-center">
+      <li class="nav-item mx-2"><a class="nav-link" href="index.html">首页</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="about.html">公司介绍</a></li>
+      <li class="nav-item dropdown mx-2">
+        <a class="nav-link dropdown-toggle" href="#" id="menuServices">服务项目</a>
+        <ul class="dropdown-menu" aria-labelledby="menuServices">
+          <li><a class="dropdown-item" href="services.html#nav-monitor">导航监控</a></li>
+          <li><a class="dropdown-item" href="services.html#usv">无人水面舰艇</a></li>
+          <li><a class="dropdown-item" href="services.html#software">软件开发</a></li>
+          <li><a class="dropdown-item" href="services.html#electronics">船舶电子</a></li>
+        </ul>
+      </li>
+      <li class="nav-item mx-2"><a class="nav-link" href="products.html">产品展示</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="contact.html">联系我们</a></li>
+    </ul>
+  </div>
+</nav>
+
+  
+<header class="hero d-flex align-items-center justify-content-center text-center">
+  <div class="overlay"></div>
+  <div class="content" data-aos="fade-up">
+    <h1 class="display-4">智领华创 — 海事科技引领者</h1>
+    <p class="lead">导航监控 · 无人水面舰艇 · 软件开发 · 船舶电子系统</p>
+    <a href="services.html" class="btn btn-warning btn-lg mt-3">了解更多</a>
+  </div>
+</header>
+
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">公司介绍</h5>
+            <p class="card-text">了解我们的企业愿景、团队和优势</p>
+            <a href="about.html" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">服务项目</h5>
+            <p class="card-text">导航监控、无人舰艇、软件开发、船舶电子</p>
+            <a href="services.html" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">产品展示</h5>
+            <p class="card-text">综合驾控系统、智能港口监控、无人艇</p>
+            <a href="products.html" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- 页脚 -->
+  <footer class="bg-light text-center py-4">
+    <div class="container">
+      <p class="mb-0">© 2025 智领华创 版权所有</p>
+    </div>
+  </footer>
+
+  <!-- 1. Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 2. AOS 动画库 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script> AOS.init(); </script>
+  <!-- 3. 自定义脚本 -->
+  <script src="js/scripts.js"></script>
+</body>
+</html>
