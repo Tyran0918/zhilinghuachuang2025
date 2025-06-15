@@ -100,6 +100,7 @@
   line-height: 1;
 }
 
+
 /* ========= Hero Section ========= */
 .p-hero {
   position: relative;
@@ -133,18 +134,72 @@
   z-index: 0;
 }
 
-/* ========= Reason Section ========= */
-.p-reason {
-  padding: 80px 16px;
-  text-align: center;
+.u-layout {
+  box-sizing: border-box;      /* ① 让 padding 和 border 都算在定义的宽度内 */
+  width: 100%;                 /* ② 默认占满父容器的可用宽度 */
+  max-width: 1200px;           /* ③ 内容区最大宽度，超出时就不再拉宽 */
+  margin: 0 auto;              /* ④ 上下外边距为 0，左右 auto 达到水平居中 */
+  padding: 0 1rem;             /* ⑤ 左右各留 1rem 内边距，防止内容贴边 */
 }
+
+
+/* ========= Reason Section ========= */
+/* 1. 外层容器：控制最大宽度并居中（假设 .u-layout 已经做了这件事） */
 .p-reason__inner {
-  max-width: 900px;
+  text-align: center;
   margin: 0 auto;
 }
-.p-reason__txt {
-  margin-top: 0.5rem;
+
+/* 2. 列表改为 flex 布局 */
+.p-reason__list {
+  display: flex;
+  justify-content: space-between; /* 四项左右等间距 */
+  align-items: flex-start;        /* 顶部对齐 */
+  margin: 2rem 0 0;               /* 根据需要调整与标题的距离 */
+  padding: 0;
+  list-style: none;
 }
+
+/* 3. 每项等分宽度，留一点左右间隙 */
+.p-reason__item {
+  flex: 1;
+  margin: 0 1rem;     /* 项目之间水平间距 */
+  text-align: center;
+}
+
+/* 4. 图片自适应 */
+.p-reason__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* 5. 文本样式 */
+.p-reason__txt {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* 6. 响应式：屏幕太窄时换行 */
+@media (max-width: 1024px) {
+  .p-reason__list {
+    flex-wrap: wrap;        /* 允许换行 */
+  }
+  .p-reason__item {
+    flex: 0 0 48%;          /* 两列布局 */
+    margin: 1%;
+  }
+}
+@media (max-width: 640px) {
+  .p-reason__item {
+    flex: 0 0 100%;         /* 单列 */
+    margin: 0 0 1.5rem;
+  }
+}
+
 
 /* ========= Business Section ========= */
 .p-business {
@@ -173,6 +228,23 @@
 .c-card__txt {
   margin-bottom: 16px;
 }
+
+
+/**/
+.c-section-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+/* 可选：让标题与内容之间更分明 */
+.c-section-card .c-heading__primary {
+  margin-bottom: 1.5rem;
+}
+
+
 
 /* ========= News Section ========= */
 .p-news {
@@ -360,20 +432,173 @@
   margin-top: 14px;
 }
 
+
+
 /* Page Hero */
+/* =========================================
+   页面英雄区 Hero Banner（圆角渐变大横幅）
+   复用 .p-page-hero 类名
+   ========================================= */
 .p-page-hero {
-  background: #f0f4f8;
+  background: linear-gradient(135deg, #004a99 0%, #007acc 70%);
+  border-radius: 40px;
+  margin-top: 2rem;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.p-page-hero__inner {
   text-align: center;
-  padding: 120px 16px 80px;
+  color: #fff;
 }
+
+.p-page-hero__label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
 .p-page-hero__title {
-  font-size: 2.25rem;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
 }
-.p-page-hero__subtitle {
-  font-size: 1rem;
-  color: #666;
+
+.p-page-hero__highlight {
+  font-weight: 400;
 }
+
+/* Breadcrumb 同步使用 */
+.c-breadcrumb {
+  margin-top: -1.5rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.c-breadcrumb a {
+  color: #004a99;
+  text-decoration: none;
+}
+
+.c-breadcrumb .is-current {
+  color: #004a99;
+}
+
+
+/* 特点(Characteristics) */
+    .p-products-detail__characteristics {
+      margin-top: 3rem;
+    }
+    .p-products-detail__char-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      list-style: none;
+      padding: 0;
+    }
+    .p-products-detail__char-item {
+      flex: 1;
+      max-width: 320px;
+      text-align: center;
+    }
+    .p-products-detail__char-icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 0.8rem;
+    }
+    .p-products-detail__char-item h3 {
+      margin: 0.5rem 0;
+      color: #004a99;
+      font-size: 1.1rem;
+    }
+    .p-products-detail__char-item p {
+      margin: 0;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    /* 子系统(Subsystems) 导航 & 内容 */
+    .p-products-detail__tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 2rem 0 1rem;
+    }
+    .p-products-detail__tab {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #f5f7fa;
+      border-radius: 6px;
+      color: #004a99;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .p-products-detail__tab:hover,
+    .p-products-detail__tab.active {
+      background: #e2e8f7;
+    }
+    .p-products-detail__tab-contents .p-products-detail__tab-panel {
+      display: none;
+      margin-top: 1.5rem;
+    }
+    .p-products-detail__media-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .p-products-detail__media-row img {
+      flex: 1;
+      max-width: calc(50% - 0.5rem);
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .p-products-detail__points {
+      list-style: disc inside;
+      color: #555;
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    .feature-nav {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0;
+    }
+    .feature-nav__link {
+      display: inline-block; padding: .6rem 1.2rem;
+      background: #f5f7fa; border-radius: 6px;
+      color: #004a99; text-decoration: none; font-weight: 500;
+      transition: background .2s;
+    }
+    .feature-nav__link:hover,
+    .feature-nav__link.active {
+      background: #e2e8f7;
+    }
+
+    /* 3. 区块基础样式 */
+    .subsystem {
+      padding: 2rem 0; border-bottom: 1px solid #ddd;
+    }
+    .subsystem h2 {
+      margin-bottom: 1rem; color: #004a99;
+    }
+    .subsystem .content {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+    }
+    .subsystem .content img {
+      max-width: 100%; border: 1px solid #ccc; border-radius: 4px;
+    }
+    .subsystem .content .txt { flex: 1; }
+
+
 
 /* Breadcrumb */
 .c-breadcrumb {
@@ -492,3 +717,320 @@
 .contact-form button:hover {
   background: #003fa5;
 }
+
+
+
+
+
+
+
+.l-footer__social {
+  display: flex;
+  gap: 16px;
+}
+
+.social-item {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.social-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.social-item .qr-popup {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.social-item:hover .qr-popup {
+  display: block;
+}
+
+.social-item .qr-popup img {
+  width: 120px;
+  height: 120px;
+}
+
+
+
+/* ---------- 子菜单容器 ---------- */
+.p-globalnav-list__submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;              /* 默认隐藏 */
+  flex-direction: column;     /* 垂直排列 */
+  background: #fff;           /* 白底 */
+  border: 2px solid #0052cc;  /* 蓝色边框 */
+  border-radius: 8px;         /* 圆角 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 8px 0;             /* 上下内边距 */
+  min-width: 200px;           /* 根据内容或设计调整宽度 */
+  z-index: 100;
+}
+
+/* 悬停时显示 */
+.p-globalnav-list__item.has-submenu:hover > .p-globalnav-list__submenu {
+  display: flex;
+}
+
+/* ---------- 子菜单项 ---------- */
+.p-globalnav-list__submenu li {
+  list-style: none;           /* 去掉默认圆点 */
+  margin: 0;                  
+}
+
+/* 链接本身 */
+.p-globalnav-list__submenu li a {
+  display: block;
+  padding: 8px 16px;          /* 左右内边距 */
+  color: #0052cc;             /* 蓝色文字 */
+  text-decoration: none;
+  position: relative;         /* 方便放短划线 */
+  font-weight: 500;
+}
+/* 前面加一条短划线 */
+.p-globalnav-list__submenu li a::before {
+  content: "–";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0052cc;
+  font-size: 1.2em;
+}
+/* 文字要往右多挪一点，避开短划线 */
+.p-globalnav-list__submenu li a {
+  padding-left: 24px;
+}
+
+/* 悬停高亮 */
+.p-globalnav-list__submenu li a:hover {
+  background: rgba(0,82,204,0.1);
+}
+
+
+/* 给带子菜单的菜单项追加一个 “+” 号 */
+.p-globalnav-list__item.has-submenu > a::after {
+  content: "+";              /* 显示加号 */
+  display: inline-block;
+  margin-left: 6px;          /* 文本和图标间距 */
+  font-weight: bold;
+  transition: transform .2s;
+}
+
+/* 鼠标悬停或子菜单展开时，把 “+” 变成 “－” */
+.p-globalnav-list__item.has-submenu:hover > a::after,
+.p-globalnav-list__item.has-submenu.is-open > a::after {
+  content: "–";              /* 或用 "-" 短横线 */
+}
+
+/* （可选）鼠标悬停时旋转一下，增加交互感 */
+.p-globalnav-list__item.has-submenu:hover > a::after {
+  transform: rotate(90deg);
+}
+
+.p-globalnav-list__submenu {
+  border-color: #074aa5 !important;
+}
+
+/* === 卡片容器 === */
+.c-contact-card {
+  background-color: #f4f6fa;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+/* === 每一行 === */
+.c-contact-card__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* 去掉最后一行的分割线 */
+.c-contact-card__item:last-child {
+  border-bottom: none;
+}
+
+/* === 左侧文字 === */
+.c-contact-card__label {
+  font-size: 0.9375rem;
+  color: #4a4a4a;
+}
+
+/* === 右侧链接 === */
+.c-contact-card__value {
+  font-size: 1.125rem;
+  color: #0052cc;
+  text-decoration: none;
+}
+
+
+
+.p-products-list__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.p-products-list__item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+}.p-products-list__features {
+  margin-bottom: 1rem;
+  list-style: disc inside;
+}
+.p-products-list__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+.p-products-list__media--grid2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+/* products.html 中单个卡片的样式 */
+.product-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform .2s, box-shadow .2s;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: .75rem;
+}
+.product-card h3 {
+  margin: .5rem 0 .25rem;
+  font-size: 1.1rem;
+  color: #004a99;
+}
+.product-card p {
+  font-size: .95rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* splide 多列布局 */
+#product-slider .splide__list {
+  display: flex;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  /* 每行显示 3 张卡片 */
+  #product-slider .splide__slide {
+    flex: 0 0 calc((100% - 3rem) / 3);
+  }
+}
+@media (max-width: 767px) {
+  /* 手机上每行 1 张 */
+  #product-slider .splide__slide {
+    flex: 0 0 100%;
+  }
+}
+
+/* ================ Splide 轮播自定义 ================ */
+.p-reason-slider {
+  padding: 4rem 0;
+}
+
+#reason-slider {
+  width: 100%;
+}
+
+#reason-slider .splide__list {
+  display: flex;
+}
+
+#reason-slider .splide__slide {
+  /* 保证等宽显示 */
+  flex: 0 0 auto;
+  width: calc((100% - 3rem) / 4); /* 默认每行 4 张，之间留 1rem 间隙 */
+  margin-right: 1rem;
+}
+
+#reason-slider .splide__slide:last-child {
+  margin-right: 0;
+}
+
+#reason-slider .splide__slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* 响应式：小屏幕时切换每行显示数量 */
+@media screen and (max-width: 1024px) {
+  #reason-slider .splide__slide {
+    width: calc((100% - 2rem) / 3);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #reason-slider .splide__slide {
+    width: calc((100% - 1rem) / 2);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #reason-slider .splide__slide {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* 1. 定义一个固定宽高比的容器，例如 16:9 */
+.slide-img-wrapper {
+  position: relative;
+  width: 100%;
+  /* 这里用 padding-top 来做 16:9 比例：9/16*100% ≈ 56.25% */
+  padding-top: 56.25%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* 2. 让 <img> 绝对定位＋铺满＋裁剪 */
+.slide-img-wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+
+

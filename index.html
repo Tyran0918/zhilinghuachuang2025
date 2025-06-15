@@ -28,6 +28,7 @@
 
   <!-- 页面级脚本（延迟加载） -->
   <script defer src="/js/scripts.js"></script>
+  
 </head>
 
 <body>
@@ -53,13 +54,22 @@
           <li class="p-globalnav-list__item has-submenu">
             <a href="services.html">服务项目</a>
             <ul class="p-globalnav-list__submenu">
-              <li><a href="services.html#automation">船舶自动化系统</a></li>
-              <li><a href="services.html#monitor">监控与检测系统</a></li>
-              <li><a href="services.html#usv">无人水面航行器</a></li>
+              <li><a href="services.html#automation">导航监控</a></li>
+              <li><a href="services.html#monitor">无人水面舰艇</a></li>
+              <li><a href="services.html#usv">软件开发</a></li>
+              <li><a href="services.html#usv">船舶电子</a></li>
             </ul>
           </li>
-          <li class="p-globalnav-list__item"><a href="products.html">产品展示</a></li>
-          <li class="p-globalnav-list__item"><a href="contact.html">联系我们</a></li>
+          <li class="p-globalnav-list__item has-submenu">
+            <a href="products.html">主要产品</a>
+            <ul class="p-globalnav-list__submenu">
+              <li><a href="ship-control.html">舰船综合驾控系统</a></li>
+              <li><a href="port-monitor.html">智能港口监控系统</a></li>
+              <li><a href="usv.html">无人艇</a></li>
+            </ul>
+          </li>
+          <!--<li class="p-globalnav-list__item"><a href="products.html">产品展示</a></li> -->
+          <!--<li class="p-globalnav-list__item"><a href="contact.html">联系我们</a></li> -->
         </ul>
       </nav>
       <!-- CTA 按钮 -->
@@ -98,18 +108,19 @@
 
     <!-- 3.1 Hero Section -->
     <section class="p-hero">
-      <div class="p-hero__inner">
+      <div  class="p-hero__inner">
         <h1 class="p-hero__title">
-          引领智能航海技术，<br class="u-over-sp-only">
-          建立中国自主品牌 <span class="p-hero__highlight">智领华创</span>
+          引领智能航海技术<br class="u-over-sp-only">
+          建立中国自主品牌 
+        <!--<span class="p-hero__highlight">智领华创</span>-->
         </h1>
         <p class="p-hero__subtitle">
           Leading the intelligent navigation technology<br>
           and establishing China's own brand.
         </p>
-        <a href="services.html" class="c-button__primary">
+       <!-- <a href="services.html" class="c-button__primary">
           了解更多 <span class="c-circle"></span>
-        </a>
+        </a>-->
       </div>
       <div class="p-hero__media">
         <video autoplay loop muted playsinline>
@@ -118,7 +129,94 @@
       </div>
     </section>
 
-    <!-- 3.2 Reason Section -->
+<section class="p-reason">
+  <div class="u-layout p-reason__inner" data-aos="fade-up">
+    <h2 class="c-heading__primary">为什么选择我们</h2>
+
+    <ul class="p-reason__list">
+      <li class="p-reason__item" data-aos="fade-up" data-aos-delay="100">
+        <img src="img/experience.jpg" alt="经验">
+        <p class="p-reason__txt">在船舶电子制造领域拥有丰富的经验。</p>
+      </li>
+      <li class="p-reason__item" data-aos="fade-up" data-aos-delay="200">
+        <img src="img/innovation.jpg" alt="创新">
+        <p class="p-reason__txt">长期与上海交通大学研究机构合作，技术领先。</p>
+      </li>
+      <li class="p-reason__item" data-aos="fade-up" data-aos-delay="300">
+        <img src="img/reliable.jpg" alt="可靠">
+        <p class="p-reason__txt">以质量为本，产品可靠性高。</p>
+      </li>
+      <li class="p-reason__item" data-aos="fade-up" data-aos-delay="400">
+        <img src="img/security.jpg" alt="安全">
+        <p class="p-reason__txt">全国产化战略，数据安全可控。</p>
+      </li>
+    </ul>
+  </div>
+<!-- ====== 你的其他内容 ====== -->
+
+<section class="p-reason-slider" data-aos="fade-up">
+  <div class="u-layout">
+    <div id="reason-slider" class="splide" aria-label="我们的优势展示">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="slide-img-wrapper"></div>
+            <picture>
+              <source media="(max-width:750px)" srcset="img/reason-01-sp.jpg">
+              <img src="img/usv-1.jpg "alt="img-reason-slider-01" loading="lazy">
+            </picture>
+          </li>
+          <li class="splide__slide">
+             <div class="slide-img-wrapper"></div>
+            <picture>
+              <source media="(max-width:750px)" srcset="img/reason-02-sp.jpg">
+              <img src="img/usv-2.jpg" alt="img-reason-slider-02" loading="lazy">
+            </picture>
+          </li>
+          <li class="splide__slide">
+             <div class="slide-img-wrapper"></div>
+            <picture>
+              <source media="(max-width:750px)" srcset="img/reason-03-sp.jpg">
+              <img src="img/usv-3.jpg" alt="img-reason-slider-03" loading="lazy">
+            </picture>
+          </li>
+          <li class="splide__slide">
+             <div class="slide-img-wrapper"></div>
+            <picture>
+              <source media="(max-width:750px)" srcset="img/reason-04-sp.jpg">
+              <img src="img/usv-4.jpg" alt="img-reason-slider-04" loading="lazy">
+            </picture>
+          </li>
+          <li class="splide__slide">
+             <div class="slide-img-wrapper"></div>
+            <picture>
+              <source media="(max-width:750px)" srcset="img/reason-05-sp.jpg">
+              <img src="img/usv-5.jpg" alt="img-reason-slider-05" loading="lazy">
+            </picture>
+          </li>
+          <li class="splide__slide">
+             <div class="slide-img-wrapper"></div>
+            <picture>
+              <source media="(max-width:750px)" srcset="img/reason-06-sp.jpg">
+              <img src="img/usv-6.jpg" alt="img-reason-slider-06" loading="lazy">
+            </picture>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 你的其他内容 ====== -->
+
+
+
+</section>
+
+
+
+
+    <!-- 3.2 Reason Section 
     <section class="p-reason">
       <div class="p-reason__inner">
         <h2 class="c-heading__primary">为什么选择我们</h2>
@@ -145,7 +243,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
 
     <!-- 3.3 Business Section -->
     <section class="p-business">
@@ -153,25 +251,66 @@
         <h2 class="c-heading__primary">我们的服务</h2>
         <div class="p-business__cards">
           <article class="c-card">
-            <h3 class="c-card__title">船舶自动化系统</h3>
-            <p class="c-card__txt">一站式交钥匙工程。</p>
+            <h3 class="c-card__title">导航监控</h3>
+            <p class="c-card__txt">综合驾控/岸基监控/电子海图显示</p>
             <a href="services/automation.html" class="c-button__link">了解详情</a>
           </article>
           <article class="c-card">
-            <h3 class="c-card__title">监控与检测系统</h3>
-            <p class="c-card__txt">实时状态监测，确保安全。</p>
+            <h3 class="c-card__title">软件开发</h3>
+            <p class="c-card__txt">港口运营系统/水域作业安全管理/航道监控</p>
             <a href="services/monitor.html" class="c-button__link">了解详情</a>
           </article>
           <article class="c-card">
-            <h3 class="c-card__title">无人水面航行器</h3>
-            <p class="c-card__txt">自主导航，提升作业效率。</p>
+            <h3 class="c-card__title">无人水面舰艇</h3>
+            <p class="c-card__txt">无人艇技术研发/无人艇产品制造</p>
+            <a href="services/usv.html" class="c-button__link">了解详情</a>
+          </article>
+          <article class="c-card">
+            <h3 class="c-card__title">船舶电子</h3>
+            <p class="c-card__txt">安全监视系统/通讯指挥系统</p>
             <a href="services/usv.html" class="c-button__link">了解详情</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- 3.4 News Section -->
+<!-- 最新动态 -->
+<section class="p-news" data-aos="fade-up">
+  <div class="u-layout">
+    <div class="c-section-card">
+      <h2 class="c-heading__primary">最新动态</h2>
+      <ul class="p-news__list">
+        <li class="p-news__item">
+          <time datetime="2025-06-10">2025/06/10</time>
+          <a>成功交付首艘无人水面航行器</a>
+         <!--  <a href="news/post1.html">成功交付首艘无人水面航行器</a>加入我们 -->
+        </li>
+        <li class="p-news__item">
+          <time datetime="2025-05-20">2025/05/20</time>
+          <a>监控系统稳定运行</a>
+        </li>
+      </ul>
+      <a href="news.html" class="c-button__secondary">查看更多</a>
+    </div>
+  </div>
+</section>
+
+<!-- 加入我们 -->
+<section class="p-recruit" data-aos="fade-up">
+  <div class="u-layout">
+    <div class="c-section-card">
+      <h2 class="c-heading__primary">加入我们</h2>
+      <p>探索更多职位机会，与我们共创辉煌。</p>
+      <a href="jobs.html" class="c-button__primary">查看职位</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <!-- 3.4 News Section 
     <section class="p-news">
       <div class="p-news__inner">
         <h2 class="c-heading__primary">最新动态</h2>
@@ -187,9 +326,10 @@
         </ul>
         <a href="news.html" class="c-button__secondary">查看更多</a>
       </div>
-    </section>
+    </section>-->
 
-    <!-- 3.5 Links Section -->
+
+    <!-- 3.5 Links Section 
     <section class="p-links">
       <div class="p-links__inner">
         <a href="about.html" class="p-links__card">
@@ -202,15 +342,16 @@
         </a>
       </div>
     </section>
+    -->
 
-    <!-- 3.6 Recruit Section -->
+    <!-- 3.6 Recruit Section 
     <section class="p-recruit">
       <div class="p-recruit__inner">
         <h2 class="c-heading__primary">加入我们</h2>
         <p>探索更多职位机会，与我们共创辉煌。</p>
         <a href="jobs.html" class="c-button__primary">查看职位</a>
       </div>
-    </section>
+    </section>-->
 
     <!-- 3.7 Contact Banner -->
     <section class="c-contact-banner">
@@ -221,8 +362,7 @@
         </p>
         <a href="mailto:info@your-domain.cn" class="c-button__secondary">发邮件给我们</a>
         <div class="c-contact-banner__inner__tel">
-          <p>TEL. <a href="tel:010-1234-5678">010-1234-5678</a></p>
-          
+          <p>EMAIL. <a href="mailto:info@your-domain.cn">info@your-domain.cn</a></p>
         </div>
       </div>
     </section>
@@ -249,9 +389,20 @@
     </div>
     <!-- 右侧：社交图标（可选） -->
     <div class="l-footer__social">
-      <a href="#" aria-label="微信"><img src="img/icon-wechat.svg" alt="微信"></a>
-      <a href="#" aria-label="QQ"><img src="img/icon-qq.svg" alt="QQ"></a>
+  <div class="social-item">
+    <img src="img/wechat-qr.png" alt="微信">
+    <div class="qr-popup">
+      <img src="img/wechat-qr.png" alt="微信二维码">
     </div>
+  </div>
+  <div class="social-item">
+    <img src="img/qq-qr.png" alt="QQ">
+    <div class="qr-popup">
+      <img src="img/qq-qr.png" alt="QQ 二维码">
+    </div>
+  </div>
+</div>
+
   </div>
   <div class="l-footer__copy">
     <p>© 2025 上海智领华创电子信息科技有限公司 版权所有</p>
@@ -260,3 +411,12 @@
 
 <!-- 回到顶部按钮 -->
 <button class="c-scroll-top" aria-label="回到顶部"></button>
+<!-- Splide 核心脚本 -->
+<script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+<!-- AOS 动画脚本 -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<!-- 你自己的脚本（已经有了） -->
+<script defer src="/js/scripts.js"></script>
+
+</body>
+</html>

@@ -26,50 +26,65 @@
   <link rel="preload" href="/css/styles.css" as="style">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
   <!-- Header -->
-  <header class="p-globalnav">
+<header class="p-globalnav">
     <div class="p-globalnav__container">
-      <a href="index.html" class="p-globalnav__logo"><img src="img/logo.jpg" alt="智领华创"></a>
+      <!-- Logo -->
+      <a href="index.html" class="p-globalnav__logo">
+        <img src="img/logo.jpg" alt="智领华创">
+      </a>
+      <!-- 手机端汉堡按钮 -->
       <button class="p-globalnav__toggle u-sp-only" aria-label="打开菜单">
         <span class="p-globalnav__toggle-line"></span>
         <span class="p-globalnav__toggle-line"></span>
         <span class="p-globalnav__toggle-line"></span>
       </button>
+      <!-- PC 端菜单 -->
       <nav class="p-globalnav__nav p-globalnav__nav--pc">
         <ul class="p-globalnav-list">
           <li class="p-globalnav-list__item"><a href="index.html">首页</a></li>
-          <li class="p-globalnav-list__item"><a class="is-active" href="about.html">公司介绍</a></li>
+          <li class="p-globalnav-list__item"><a href="about.html">公司介绍</a></li>
           <li class="p-globalnav-list__item has-submenu">
             <a href="services.html">服务项目</a>
             <ul class="p-globalnav-list__submenu">
-              <li><a href="services.html#nav-monitor">导航监控</a></li>
-              <li><a href="services.html#usv">无人水面舰艇</a></li>
-              <li><a href="services.html#software">软件开发</a></li>
-              <li><a href="services.html#electronics">船舶电子</a></li>
+              <li><a href="services.html#automation">导航监控</a></li>
+              <li><a href="services.html#monitor">无人水面舰艇</a></li>
+              <li><a href="services.html#usv">软件开发</a></li>
+              <li><a href="services.html#usv">船舶电子</a></li>
             </ul>
           </li>
-          <li class="p-globalnav-list__item"><a href="products.html">产品展示</a></li>
-          <li class="p-globalnav-list__item"><a href="contact.html">联系我们</a></li>
+          <li class="p-globalnav-list__item has-submenu">
+            <a href="products.html">主要产品</a>
+             <ul class="p-globalnav-list__submenu">
+              <li><a href="ship-control.html">舰船综合驾控系统</a></li>
+              <li><a href="port-monitor.html">智能港口监控系统</a></li>
+              <li><a href="usv.html">无人艇</a></li>
+            </ul>
+          </li>
+          <!--<li class="p-globalnav-list__item"><a href="products.html">产品展示</a></li> -->
+          <!--<li class="p-globalnav-list__item"><a href="contact.html">联系我们</a></li> -->
         </ul>
       </nav>
+      <!-- CTA 按钮 -->
       <div class="p-globalnav__cta">
         <a href="contact.html" class="c-button__secondary">
           联系我们 <span class="c-button__secondary__circle"></span>
         </a>
       </div>
+      <!-- 手机端展开菜单 -->
       <nav class="p-globalnav__nav p-globalnav__nav--mobile u-sp-only">
         <ul class="p-globalnav-list">
           <li class="p-globalnav-list__item"><a href="index.html">首页</a></li>
-          <li class="p-globalnav-list__item"><a class="is-active" href="about.html">公司介绍</a></li>
+          <li class="p-globalnav-list__item"><a href="about.html">公司介绍</a></li>
           <li class="p-globalnav-list__item has-submenu">
             <a href="services.html">服务项目</a>
             <ul class="p-globalnav-list__submenu">
-              <li><a href="services.html#nav-monitor">导航监控</a></li>
-              <li><a href="services.html#usv">无人水面舰艇</a></li>
-              <li><a href="services.html#software">软件开发</a></li>
-              <li><a href="services.html#electronics">船舶电子</a></li>
+              <li><a href="services.html#automation">船舶自动化系统</a></li>
+              <li><a href="services.html#monitor">监控与检测系统</a></li>
+              <li><a href="services.html#usv">无人水面航行器</a></li>
             </ul>
           </li>
           <li class="p-globalnav-list__item"><a href="products.html">产品展示</a></li>
@@ -83,6 +98,8 @@
     </div>
   </header>
 
+
+
   <!-- Main -->
   <main>
     <section class="p-page-hero">
@@ -91,61 +108,88 @@
         <p class="p-page-hero__subtitle">智领华创 — 海事科技引领者</p>
       </div>
     </section>
-
+  <!--  
     <nav class="c-breadcrumb u-layout" aria-label="Breadcrumb">
       <a href="index.html">首页</a> &gt; <span>公司介绍</span>
-    </nav>
+    </nav>-->
 
     <div class="u-layout p-page-content">
       <section data-aos="fade-up">
         <h2>企业简介</h2>
-        <p>智领华创成立于2024年9月20日，位于上海自由贸易试验区，专业从事船舶自动化、监控系统、无人航行器的研发与制造。</p>
+        <p>智领华创成立于2024年9月20日，位于中国（上海）自由贸易试验区，专业从事船舶自动化、检测、监控系统制造；海上通信技术研发；无人水面航行器制造等信息化装备研制工作。</p>
       </section>
       <section data-aos="fade-up" data-aos-delay="100" class="mt-5">
         <h2>团队介绍</h2>
-        <p>公司核心团队由航海、电子、管理等人士组成，提供专业的科研与实践支持。</p>
-        <img src="img/team.jpg" alt="团队合照" loading="lazy" class="img-fluid rounded mt-3">
+        <img src="img/team_introduce.jpg" alt="团队合照" loading="lazy" class="img-fluid rounded mt-3">
+        <p>公司核心团队由航海、电子、管理等多专业人才搭配组成，积极+沉稳+专业造就了一个具有雄厚的技术实力和敏锐的创新意识的精英团队。凭借公司在环渤海经济圈和长三角经济圈的区域位置以及多元化的合作伙伴网络，智领华创汇聚了一批跨多个领域的精英专家团队。每支团队都具备深厚的专业知识和丰富的实践经验，能够为项目提供卓越的科研、实践双重贡献，构建起全面的产业生态。</p>
+        
       </section>
       <section data-aos="fade-up" data-aos-delay="200" class="mt-5">
         <h2>愿景与使命</h2>
-        <p>引领智能航海技术，建立中国自主品牌，推动行业智能化转型与可持续发展。</p>
+        <p>“引领智能航海技术，建立中国自主品牌”</p>
+      </section>
+      <section data-aos="fade-up" data-aos-delay="200" class="mt-5">
+        <h2>企业目标</h2>
+        <p>智领华创致力于引领智能航海技术的革新潮流，矢志不渝地建立  并强化中国在全球航海领域的自主品牌地位。通过持续的研发创 新与技术突破，我们旨在推动航海行业的智能化转型，不仅提升航行效率与安全性能，更促进环境保护与可持续发展。我们坚信，通过融合物联网、大数据、人工智能等前沿科技，能够开创航海技术的新纪元，为中国乃至全球的航运业带来革命性的变革。</p>
       </section>
       <section data-aos="fade-up" data-aos-delay="300" class="mt-5">
         <h2>企业优势</h2>
         <ul>
-          <li>丰富的船舶电子制造经验，提供全生命周期服务。</li>
-          <li>与上海交大研究机构合作，技术始终领先。</li>
-          <li>产品质量可靠，客户满意度高。</li>
-          <li>全国产化战略，数据安全可控。</li>
+          <li>在船舶电子制造领域拥有丰富的经验。已成功完成许多复杂项目，为客户提供高质量的产品交付和全生命周期服务。</li>
+          <li>长期与上海交通大学研究机构合作，获得前沿技术和研究支持，确保我们的技术保持领先水平</li>
+          <li>公司将产品质量看作是立身之本，能够为客户打造可靠的产品，确保客户的满意度。</li>
+          <li>产品全部使用国产操作系统和国产数据库，具有更好的本地化安全策略,能够更好地保护用户数据,提高数据安全性。</li>
         </ul>
       </section>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="l-footer">
-    <div class="l-footer__inner">
-      <div class="l-footer__left">
-        <a href="index.html" class="l-footer__logo"><img src="img/footer-logo.svg" alt="智领华创"></a>
-        <p>上海市某区某路123号</p>
-        <p>TEL：010-1234-5678 | FAX：010-1234-5679</p>
-      </div>
-      <div class="l-footer__links">
-        <a href="privacy.html">隐私政策</a>
-        <a href="security.html">信息安全</a>
-        <a href="sitemap.xml">网站地图</a>
-      </div>
-      <div class="l-footer__social">
-        <!-- 社交图标 -->
-      </div>
+ <footer class="l-footer">
+  <div class="l-footer__inner">
+    <!-- 左侧：Logo + 联系方式 -->
+    <div class="l-footer__left">
+      <a href="index.html" class="l-footer__logo">
+        <img src="img/logo.jpg" alt="返回顶部">
+      </a>
+      <p>地址：中国某省某市某区某路123号</p>
+      <p>TEL：+86 1234-5678-901 </p>
     </div>
-    <div class="l-footer__copy">
-      <p>© 2025 上海智领华创电子信息科技有限公司 版权所有</p>
+    <!-- 中间：法律/站点链接 -->
+    <div class="l-footer__links">
+      <a href="privacy.html">隐私政策</a>
+      <a href="security.html">信息安全</a>
+      <a href="sitemap.xml">网站地图</a>
     </div>
-  </footer>
+    <!-- 右侧：社交图标（可选） -->
+    <div class="l-footer__social">
+  <div class="social-item">
+    <img src="img/wechat-qr.png" alt="微信">
+    <div class="qr-popup">
+      <img src="img/wechat-qr.png" alt="微信二维码">
+    </div>
+  </div>
+  <div class="social-item">
+    <img src="img/qq-qr.png" alt="QQ">
+    <div class="qr-popup">
+      <img src="img/qq-qr.png" alt="QQ 二维码">
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="l-footer__copy">
+    <p>© 2025 上海智领华创电子信息科技有限公司 版权所有</p>
+  </div>
+</footer>
 
   <button class="c-scroll-top" aria-label="回到顶部"></button>
 
-  <script src="/js/scripts.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script defer src="/js/scripts.js"></script>
+
 </body>
 </html>

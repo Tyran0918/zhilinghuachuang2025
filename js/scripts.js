@@ -71,3 +71,40 @@ if (form) {
     }
   });
 }
+
+
+toggle.addEventListener('click', () => {
+  mobileNav.classList.toggle('is-open');
+  toggle.classList.toggle('is-active');
+  // 如果是父级菜单项单独控制，可以：
+  this.closest('.has-submenu').classList.toggle('is-open');
+});
+document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide( '#product-slider', {
+    type   : 'loop',
+    perPage: 3,
+    gap    : '1.5rem',
+    breakpoints: {
+      767: {
+        perPage: 1,
+      },
+    },
+  } ).mount();
+} );
+
+
+document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide( '#reason-slider', {
+    type      : 'loop',
+    perPage   : 4,
+    perMove   : 1,
+    gap       : '1rem',
+    pagination: false,
+    arrows    : true,
+    breakpoints: {
+      1024: { perPage: 3 },
+      768:  { perPage: 2 },
+      480:  { perPage: 1 }
+    }
+  } ).mount();
+});
